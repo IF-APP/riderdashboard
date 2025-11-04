@@ -26,12 +26,12 @@ export function Login() {
     }
 
     try {
-      const response = await fetch("https://ridersalarybd.onrender.com", {
+      const response = await fetch("https://ridersalarybd.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: `username=${email}&password=${password}`
+         body: `username=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`,
       });
       console.log("Response status:", response.status);
       console.log("Response headers:", response.headers);
