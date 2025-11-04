@@ -59,7 +59,7 @@ export function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/auth/generate-reset-token", {
+      const response = await fetch("https://ridersalarybd.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
