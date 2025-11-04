@@ -59,7 +59,7 @@ export function Login() {
     }
 
     try {
-      const response = await fetch("https://ridersalarybd.onrender.com", {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
